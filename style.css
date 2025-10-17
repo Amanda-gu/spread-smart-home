@@ -1,3 +1,16 @@
 :root{
-    background-color: aqua;
+    font-size: 125%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    padding: 2rem;
+}
+
+h1{
+    font-size: 2rem;
+}
+
+p{
+    margin-block-start: 2rem;
 }
