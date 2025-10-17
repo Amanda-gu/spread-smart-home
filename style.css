@@ -1,17 +1,32 @@
 :root{
     --spacing: 2rem;
+    --text-color: aliceblue;
+    --background-color: black;
     font-size: 125%;
     font-family: 'Courier New', Courier, monospace;
+
+    color: var(--text-color);
+    background-color: var(--background-color);
 }
 
 @media(width>600px){
     :root{
         --spacing: 1rem;
-    font-size: 200%;
+        font-size: 200%;
     /* font-family: 'Courier New', Courier, monospace; */
     }
 }
 
+
+@media print {
+    :root{
+        --text-color: black;
+        --background-color: white;
+
+        color: var(--text-color);
+        background-color: var(--background-color);
+    }
+}
 body{
     padding: var(--spacing);
 }
