@@ -23,6 +23,10 @@
         --text-color: black;
         --background-color: white;
     }
+
+    body{
+        margin: 1in;
+    }
 }
 
 
