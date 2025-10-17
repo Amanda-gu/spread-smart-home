@@ -1,16 +1,29 @@
 :root{
+    --spacing: 2rem;
     font-size: 125%;
     font-family: 'Courier New', Courier, monospace;
 }
 
+@media(width>600px){
+    :root{
+        --spacing: 1rem;
+    font-size: 200%;
+    /* font-family: 'Courier New', Courier, monospace; */
+    }
+}
+
 body{
-    padding: 2rem;
+    padding: var(--spacing);
 }
 
 h1{
     font-size: 2rem;
+
+    @media(width: 800px){
+        font-size: 4rem;
+    }
 }
 
 p{
-    margin-block-start: 2rem;
+    margin-block-start: calc(2*var(--spacing));
 }
