@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
 :root{
     --spacing: 2rem;
     --text-color: aliceblue;
     --background-color: black;
     font-size: 125%;
-    font-family: 'Courier New', Courier, monospace;
+    line-height: 1.5rem;
+    font-family: "Inconsolata", monospace;
 
     color: var(--text-color);
     background-color: var(--background-color);
+}
+
+em {
+    font-style: italic;
 }
 
 @media(width>600px){
