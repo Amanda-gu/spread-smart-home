@@ -9,7 +9,16 @@
     --digital-type: 'Digital Numbers', sans-serif;
 }
 
-/* everything mobile */
+
+@media(width>600px){
+    :root{
+        --spacing: 1rem;
+        font-size: 100%;
+    /* font-family: 'Courier New', Courier, monospace; */
+    }
+}
+
+
 body {
     font-size: 125%;
     line-height: 2rem;
@@ -33,30 +42,53 @@ body {
     }
 
     header{
-        h1{
-        font-size: 2rem;
-        line-height: 3rem;
+        hgroup{
         font-family: var(--digital-type);
-        border-radius: 0.75rem;
+        border-radius: 0.75em;
         border: 0.1rem dashed var(--accent-color);
         background: rgba(0, 255, 115, 0.20);
         backdrop-filter: blur(1rem);
+        margin-block: var(--spacing);
+        padding: var(--spacing);
+        display: block;
+        text-align: center;
 
         @media (width>600px){
         font-size: 2rem;
         grid-area: header;
         }
+        
+            
+            h1{
+                font-size: 2.2rem;
+                line-height: 3.2rem;
+                padding-block-end: 1rem;
+            }
+
+            h2{
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+
+            p {
+                font-size: 1.4rem;
+                line-height: 2.4rem;
+            }
+        
         }
+
+        /* spacing for mobile */
+       
     }
 
     main{
         grid-area: main;
-        background-color: blue;
+        /* background-color: blue; */
     }
 
     footer{
         grid-area: footer;
-        background-color: yellow;
+        /* background-color: yellow; */
     }
 
     .in_parentheses{
@@ -68,9 +100,6 @@ body {
         font-size: smaller;
     }
 
-    p{
-     margin-block-start: calc(2*var(--spacing));
-    }
 
     em {
         font-style: italic;
@@ -80,13 +109,6 @@ body {
 
 
 
-@media(width>600px){
-    :root{
-        --spacing: 1rem;
-        font-size: 100%;
-    /* font-family: 'Courier New', Courier, monospace; */
-    }
-}
 
 
 @media print {
