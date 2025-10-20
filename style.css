@@ -20,8 +20,8 @@
 
 
 body {
-    font-size: 125%;
-    line-height: 2rem;
+    font-size: 110%;
+    line-height: 1.8rem;
     font-family: "Inconsolata", monospace;
     color: var(--text-color);
     background-color: var(--background-color);
