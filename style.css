@@ -4,9 +4,12 @@
 :root{
     --spacing: 2rem;
     --text-color: aliceblue;
-    --background-color: black;
+    --background-color: linear-gradient(180deg, #000 45.1%, #082C12 100%);
     --accent-color: #00FF73;
     --digital-type: 'Digital Numbers', sans-serif;
+    --h1: 2.2rem;
+    --h2: 1.4rem;
+    --body: 1rem;
 }
 
 
@@ -24,7 +27,7 @@ body {
     line-height: 1.8rem;
     font-family: "Inconsolata", monospace;
     color: var(--text-color);
-    background-color: var(--background-color);
+    background: var(--background-color);
     padding: var(--spacing);
 
 
@@ -34,7 +37,7 @@ body {
     
     
     /* grid for desktop */
-    @media (width>600px){
+    @media (width>1000px){
         /* grid-template-rows: 6rem 65vh 6rem; */
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -49,10 +52,19 @@ body {
         
         font-family: var(--digital-type);
         margin-block-end: var(--spacing);
+
+
+
+        hgroup{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+       
         
         /* everything in the green box */
         section{
-            
+            max-inline-size: 40rem;
             border-radius: 0.75em;
             border: 0.1rem dashed var(--accent-color);
             background: rgba(0, 255, 115, 0.20);
@@ -63,20 +75,20 @@ body {
             text-align: center;
             color: var(--accent-color);
 
-        @media (width>600px){
-        font-size: 2rem;
-        grid-area: header;
+        @media (width>1000px){
+            font-size: 2rem;
+            grid-area: header;
         }
         
             
             h1{
-                font-size: 2.2rem;
+                font-size: var(--h1);
                 line-height: 3.2rem;
                 padding-block-end: 1rem;
             }
 
             h2{
-                font-size: 1.4rem;
+                font-size: var(--h2);
                 line-height: 2.4rem;
             }
 
@@ -105,7 +117,7 @@ body {
             padding-block: 1rem;
             position: sticky;
             inset-block-start: 0;
-            background-color: var(--background-color);
+            background-color: black;
             border-block-end: 0.3rem solid var(--accent-color);
 
             font-family: var(--digital-type);
@@ -118,11 +130,24 @@ body {
                 margin-inline-start: 1rem;
             }
         }
-
+/* article spacing */
         article {
             p, blockquote {
-                padding-block-start: var(--spacing);
+                padding-block: var(--spacing);
+                }
+            blockquote:not(:first-child){
+                margin-block: var(--spacing);
             }
+
+            blockquote {
+                padding: 1.2rem;
+                background-color: var(--accent-color);
+                color: black;
+                border-radius: 0.4rem;
+                font-size: var(--h2);
+            }
+
+
         }
     }
 
