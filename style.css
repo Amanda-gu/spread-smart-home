@@ -42,16 +42,20 @@ body {
     }
 
     header{
-        hgroup{
+        
         font-family: var(--digital-type);
-        border-radius: 0.75em;
-        border: 0.1rem dashed var(--accent-color);
-        background: rgba(0, 255, 115, 0.20);
-        backdrop-filter: blur(1rem);
-        margin-block: var(--spacing);
-        padding: var(--spacing);
-        display: block;
-        text-align: center;
+        
+        /* everything in the green box */
+        section{
+            
+            border-radius: 0.75em;
+            border: 0.1rem dashed var(--accent-color);
+            background: rgba(0, 255, 115, 0.20);
+            backdrop-filter: blur(1rem);
+            margin-block: var(--spacing);
+            padding: var(--spacing);
+            display: block;
+            text-align: center;
 
         @media (width>600px){
         font-size: 2rem;
@@ -70,13 +74,15 @@ body {
                 line-height: 2.4rem;
             }
 
-            p {
-                font-size: 1.4rem;
-                line-height: 2.4rem;
-            }
-        
+            
         }
 
+        p {
+                        font-size: 1.2rem;
+                        line-height: 2.0rem;
+                        text-align: center;
+                    }
+                
         /* spacing for mobile */
        
     }
