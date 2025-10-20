@@ -27,6 +27,10 @@ body {
     background-color: var(--background-color);
     padding: var(--spacing);
 
+
+    a {
+        color: var(--accent-color);
+    }
     
     
     /* grid for desktop */
@@ -114,6 +118,12 @@ body {
                 margin-inline-start: 1rem;
             }
         }
+
+            article {
+                p, blockquote {
+                padding-block: var(--spacing);
+                }
+            }
     }
 
     footer{
