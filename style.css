@@ -5,7 +5,8 @@
     --spacing: 2rem;
     --text-color: aliceblue;
     --background-color: black;
-    
+    --accent-color: #00FF73;
+    --digital-type: 'Digital Numbers', sans-serif;
 }
 
 /* everything mobile */
@@ -17,16 +18,45 @@ body {
     background-color: var(--background-color);
     padding: var(--spacing);
 
+    
+    
+    /* grid for desktop */
+    @media (width>600px){
+        /* grid-template-rows: 6rem 65vh 6rem; */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            'header main main'
+            'header main main'
+            'footer footer footer'; 
+            /* Set up our grid. */
+    }
+
     header{
         h1{
         font-size: 2rem;
         line-height: 3rem;
-        font-family: 'Digital Numbers', sans-serif;
+        font-family: var(--digital-type);
+        border-radius: 0.75rem;
+        border: 0.1rem dashed var(--accent-color);
+        background: rgba(0, 255, 115, 0.20);
+        backdrop-filter: blur(1rem);
 
-        @media (width: 800px){
-        font-size: 4rem;
+        @media (width>600px){
+        font-size: 2rem;
+        grid-area: header;
         }
         }
+    }
+
+    main{
+        grid-area: main;
+        background-color: blue;
+    }
+
+    footer{
+        grid-area: footer;
+        background-color: yellow;
     }
 
     .in_parentheses{
@@ -53,7 +83,7 @@ body {
 @media(width>600px){
     :root{
         --spacing: 1rem;
-        font-size: 200%;
+        font-size: 100%;
     /* font-family: 'Courier New', Courier, monospace; */
     }
 }
