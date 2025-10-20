@@ -44,6 +44,7 @@ body {
     header{
         
         font-family: var(--digital-type);
+        margin-block-end: var(--spacing);
         
         /* everything in the green box */
         section{
@@ -90,6 +91,15 @@ body {
     main{
         grid-area: main;
         /* background-color: blue; */
+        position: relative;
+        
+
+        nav{
+            display: flex;
+            position: sticky;
+            inset-block-start: 0;
+            background-color: var(--background-color);
+        }
     }
 
     footer{
