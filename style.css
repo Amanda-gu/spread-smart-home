@@ -84,10 +84,10 @@ body {
         }
 
         p {
-                        font-size: 1rem;
-                        line-height: 1.8rem;
-                        text-align: center;
-                    }
+            font-size: 1rem;
+            line-height: 1.8rem;
+            text-align: center;
+        }
                 
         /* spacing for mobile */
        
@@ -119,11 +119,11 @@ body {
             }
         }
 
-            article {
-                p, blockquote {
-                padding-block: var(--spacing);
-                }
+        article {
+            p, blockquote {
+                padding-block-start: var(--spacing);
             }
+        }
     }
 
     footer{
