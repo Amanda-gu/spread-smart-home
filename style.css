@@ -3,8 +3,8 @@
 
 :root{
     --spacing: 2rem;
-    --text-color: aliceblue;
-    --background-color: linear-gradient(180deg, #000 45.1%, #082C12 100%);
+    --text-color: #cdcdcd;
+    --background-color: linear-gradient(180deg, #161616 45.1%, #082C12 100%);
     --accent-color: #00FF73;
     --digital-type: 'Digital Numbers', sans-serif;
     --h1: 2.2rem;
@@ -147,6 +147,10 @@ body {
                 font-size: var(--h2);
             }
 
+            .citation {
+                display: flex;
+                
+            }
 
         }
     }
