@@ -149,7 +149,14 @@ body {
 
             .citation {
                 display: flex;
+                gap: 3rem;
                 
+                
+                /* margin-inline-start: -20em; */
+
+                p:last-child{
+                    order: -1;
+                }
             }
 
         }
