@@ -248,8 +248,9 @@ body {
 
     .superscript{
         vertical-align: super;
-        font-size: smaller;
+        font-size: 0.8em;
         line-height: 0;
+        color: var(--accent-color-darker);
     }
 
 
