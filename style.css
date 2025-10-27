@@ -8,8 +8,8 @@
     --background-color: linear-gradient(180deg, #161616 45.1%, #082C12 100%);
     --accent-color: #00FF73;
     --digital-type:  'Bitcount Grid Single', system-ui;
-    --h1: 2.2rem;
-    --h2: 1.4rem;
+    --h1: 4rem;
+    --h2: 1.8rem;
     --body: 1rem;
 }
 
@@ -36,8 +36,12 @@ body {
     }
     
     
-   
+
     
+    main{
+
+
+           
     header{
         
         margin-block-end: var(--spacing);
@@ -54,11 +58,11 @@ body {
         /* everything in the green box */
         section{
             max-inline-size: 40rem;
-            border-radius: 0.75em;
+            /* border-radius: 0.75em; */
             /* border: 0.1rem dashed var(--accent-color); */
             /* background: rgba(0, 255, 115, 0.20); */
-            backdrop-filter: blur(1rem);
-            margin-block: var(--spacing);
+            /* backdrop-filter: blur(1rem); */
+            /* margin-block: var(--spacing); */
             /* padding: var(--spacing); */
             display: block;
             text-align: left;
@@ -74,7 +78,7 @@ body {
             h1{
                 font-family: var(--digital-type);
                 font-size: var(--h1);
-                line-height: 3.2rem;
+                line-height: var(--h1);
                 padding-block-end: 1rem;
             }
             
@@ -94,20 +98,39 @@ body {
         
         /* spacing for mobile */
         
-    }
-    
-    main{
+    } 
+
+
         /* background-color: blue; */
         position: relative;
-        padding: 6rem;
+        padding: calc(var(--spacing)*3);
+
         *{
-            padding-block: var(--spacing);
+            padding-block-end: var(--spacing);
         }
         
         .authordate{
             display: flex;
             justify-content: space-between;
         }
+
+
+
+
+        blockquote {
+                padding: 1.2rem;
+                background-color: var(--accent-color);
+                color: black;
+                border-radius: 0.4rem;
+                font-size: var(--h2);
+                line-height: calc(var(--h2)*1.6) ;
+            }
+
+        .citationstyle {
+                display: flex;
+                gap: 3rem;
+
+            }
 
          /* grid for desktop */
         @media (width>1000px){
@@ -134,10 +157,9 @@ body {
             }
         }
 
+    
         
-
-        
-        }
+    }
 /*         
         nav{
             display: flex;
@@ -168,29 +190,11 @@ body {
                 margin-block: var(--spacing);
             }
 
-            blockquote {
-                padding: 1.2rem;
-                background-color: var(--accent-color);
-                color: black;
-                border-radius: 0.4rem;
-                font-size: var(--h2);
-            }
-
-            .citation {
-                display: flex;
-                gap: 3rem;
-                
-                
-                /* margin-inline-start: -20em; */
-
-                p:last-child{
-                    order: -1;
-                }
-            }
+            
 
         }
     }
-}
+
 
     footer{
         background-color: black;
@@ -215,8 +219,10 @@ body {
     }
 
     .superscript{
-         vertical-align: super;
+        vertical-align: super;
         font-size: smaller;
+        line-height: 0;
+
     }
 
 
