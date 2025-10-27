@@ -5,12 +5,13 @@
 :root{
     --spacing: 2rem;
     --text-color: #cdcdcd;
-    --background-color: linear-gradient(180deg, #161616 45.1%, #082C12 100%);
+    /* --background-color: linear-gradient(180deg, #161616 45.1%, #082C12 100%); */
+    --background-color: #161616;
     --accent-color: #00FF73;
     --accent-color-darker: #082B12;
     --digital-type:  'Bitcount Grid Single', system-ui;
-    --h1: 4rem;
-    --h2: 1.8rem;
+    --h1: 3rem;
+    --h2: 1.2rem;
     --body: 1rem;
 }
 
@@ -18,7 +19,7 @@
 @media(width>600px){
     :root{
         --spacing: 1rem;
-        font-size: 100%;
+        font-size: 120%;
     /* font-family: 'Courier New', Courier, monospace; */
     }
 }
@@ -52,19 +53,12 @@ body {
         hgroup{
             display: flex;
             flex-direction: column;
-
         }
         
         
         /* everything in the green box */
         section{
-            max-inline-size: 40rem;
-            /* border-radius: 0.75em; */
-            /* border: 0.1rem dashed var(--accent-color); */
-            /* background: rgba(0, 255, 115, 0.20); */
-            /* backdrop-filter: blur(1rem); */
-            /* margin-block: var(--spacing); */
-            /* padding: var(--spacing); */
+           
             display: block;
             text-align: left;
             color: var(--accent-color);
@@ -79,13 +73,13 @@ body {
             h1{
                 font-family: var(--digital-type);
                 font-size: var(--h1);
-                line-height: var(--h1);
+                line-height: calc(var(--h1)*1.2);
                 padding-block-end: 1rem;
             }
             
             h2{
                 font-size: var(--h2);
-                line-height: 2.4rem;
+                line-height: calc(var(--h2)*1.6);
             }
             
             
@@ -157,16 +151,18 @@ body {
          /* grid for desktop */
         @media (width>1000px){
         /* grid-template-rows: 6rem 65vh 6rem; */
-        display: grid;
+
 
         .citation, .paragraphsonly{
             display: grid;
-            gap: 6rem;
+            gap: calc(var(--spacing)*3) ;
             grid-template-columns: 1fr 2fr;
             padding-block-end: calc(var(--spacing)*4) ;
 
             .citationstyle{
                 order: -1;
+                font-size: 80%;
+                line-height: 130%;
                 display: block;
                 background-color: var(--accent-color-darker);
                 gap: 3rem;
@@ -222,33 +218,24 @@ body {
             }
         } */
         /* article spacing */
-        article {
-            padding: var(--spacing);
-            p, blockquote {
-                padding-block: var(--spacing);
-            }
-            blockquote:not(:first-child){
-                margin-block: var(--spacing);
-            }
-
-            
-
-        }
+    
     }
 
 
     footer{
-        background-color: black;
-        padding-inline: 4rem;
-        padding-block: 6rem;
+        background-color: var(--accent-color);
+        padding-inline: calc(var(--spacing)*6);
+        padding-block: calc(var(--spacing)*3);
         display: flex;
         justify-content: space-between; 
 
         p{
             font-size: 1rem;
-            color: #008039;
+            color: black;
         }
-
+        a {
+            color: black;
+        }
         section{
             display: flex;
             flex-direction: column;
