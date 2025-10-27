@@ -106,6 +106,7 @@ body {
         
         .authordate{
             display: flex;
+    
             justify-content: space-between;
             margin-block-end: var(--spacing);
         }
@@ -152,15 +153,23 @@ body {
         @media (width>1000px){
         /* grid-template-rows: 6rem 65vh 6rem; */
 
+        display: grid;
+        gap: calc(var(--spacing)*3);
+        grid-template-columns: 1fr 2fr;
+        padding-block-end: calc(var(--spacing)*4);
+        grid-template-areas:
+		    'emp body';
 
-        .citation, .paragraphsonly{
-            display: grid;
-            gap: calc(var(--spacing)*3) ;
-            grid-template-columns: 1fr 2fr;
-            padding-block-end: calc(var(--spacing)*4) ;
+        p, section, blockquote{
+               grid-column: body;
+            }
+        
+        h2 {
+                grid-column: emp;
+            }
 
-            .citationstyle{
-                order: -1;
+        .citationstyle{
+                grid-column: emp;
                 font-size: 80%;
                 line-height: 130%;
                 display: block;
@@ -177,14 +186,16 @@ body {
                      padding-block: var(--spacing);
                      color: var(--accent-color);
                 }
+
+        
               
-            }
+        
 
 
 
 
         }
-
+/* 
         .paragraphsonly{
             grid-template-areas:
 		    'emp body';
@@ -192,7 +203,7 @@ body {
             p, blockquote{
                 grid-area: body;
             }
-        }
+        } */
 
     
         
