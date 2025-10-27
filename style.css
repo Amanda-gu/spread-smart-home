@@ -5,7 +5,6 @@
 :root{
     --spacing: 2rem;
     --text-color: #cdcdcd;
-    /* --background-color: linear-gradient(180deg, #161616 45.1%, #082C12 100%); */
     --background-color: #161616;
     --accent-color: #00FF73;
     --accent-color-darker: #082B12;
@@ -20,7 +19,6 @@
     :root{
         --spacing: 1rem;
         font-size: 120%;
-    /* font-family: 'Courier New', Courier, monospace; */
     }
 }
 
@@ -37,18 +35,12 @@ body {
         color: var(--accent-color);
     }
     
-    
 
-    
     main{
 
-
-           
     header{
         
         margin-block-end: var(--spacing);
-        
-        
         
         hgroup{
             display: flex;
@@ -58,7 +50,6 @@ body {
         
         /* everything in the green box */
         section{
-           
             display: block;
             text-align: left;
             color: var(--accent-color);
@@ -90,6 +81,8 @@ body {
             line-height: 1.8rem;
             text-align: center;
         }
+
+        
         
         /* spacing for mobile */
         
@@ -133,6 +126,28 @@ body {
                     /* Do we need to add '”' to the after state aswell or just before? */
                 }
             }
+
+
+        .dialogue{
+            background-color: var(--accent-color-darker);
+            color: var(--accent-color);
+            padding: calc(var(--spacing)*2);
+
+            p:nth-of-type(even){
+                margin-inline-start: var(--spacing);
+                margin-block-end: calc(var(--spacing)*3) ;
+                font-size: 1.2rem;
+            }
+
+            p:nth-of-type(odd){
+                font-size: var(--spacing);
+            }
+
+            p:last-child{
+                margin-block-end: 0;
+            }
+            
+        }
 
         .citationstyle {
                 
