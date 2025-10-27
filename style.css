@@ -7,6 +7,7 @@
     --text-color: #cdcdcd;
     --background-color: linear-gradient(180deg, #161616 45.1%, #082C12 100%);
     --accent-color: #00FF73;
+    --accent-color-darker: #082B12;
     --digital-type:  'Bitcount Grid Single', system-ui;
     --h1: 4rem;
     --h2: 1.8rem;
@@ -105,9 +106,9 @@ body {
         position: relative;
         padding: calc(var(--spacing)*3);
 
-        *{
+        /* *{
             padding-block-end: var(--spacing);
-        }
+        } */
         
         .authordate{
             display: flex;
@@ -127,8 +128,16 @@ body {
             }
 
         .citationstyle {
-                display: flex;
+                
+                display: block;
+                background-color: var(--accent-color-darker);
                 gap: 3rem;
+
+                p:first-child{
+                    background-color: var(--accent-color);
+                    color: var(--accent-color-darker);
+                    
+                }
 
             }
 
@@ -141,10 +150,29 @@ body {
             display: grid;
             gap: 6rem;
             grid-template-columns: 1fr 2fr;
+            padding-block-end: calc(var(--spacing)*4) ;
 
             .citationstyle{
-             order: -1;
+                order: -1;
+                display: block;
+                background-color: var(--accent-color-darker);
+                gap: 3rem;
+                align-self: start;
+
+                *{
+                    padding-inline: var(--spacing);
+                    padding-block: calc(var(--spacing)/2);
+                }
+
+                p:nth-child(2){
+                     padding-block: var(--spacing);
+                     color: var(--accent-color);
+                }
+              
             }
+
+
+
 
         }
 
@@ -222,7 +250,6 @@ body {
         vertical-align: super;
         font-size: smaller;
         line-height: 0;
-
     }
 
 
