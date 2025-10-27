@@ -104,7 +104,7 @@ body {
 
         /* background-color: blue; */
         position: relative;
-        padding: calc(var(--spacing)*3);
+        padding: calc(var(--spacing)*6);
 
         /* *{
             padding-block-end: var(--spacing);
@@ -113,18 +113,30 @@ body {
         .authordate{
             display: flex;
             justify-content: space-between;
+            margin-block-end: var(--spacing);
         }
 
 
 
 
         blockquote {
-                padding: 1.2rem;
+                padding-inline:calc(var(--spacing)*4);
+                padding-block: calc(var(--spacing)*2);
                 background-color: var(--accent-color);
                 color: black;
-                border-radius: 0.4rem;
                 font-size: var(--h2);
-                line-height: calc(var(--h2)*1.6) ;
+                line-height: calc(var(--h2)*1.6);
+                align-self: start;
+                margin: var(--spacing);
+                outline: 0.05rem solid var(--accent-color);
+                outline-offset: var(--spacing);
+                /* We used code pen for the outline border | link: https://codepen.io/yochans/pen/XWNjzop */
+
+                p::before{
+                    content: '“';
+                    margin-inline-start: -0.9em;
+                    /* Do we need to add '”' to the after state aswell or just before? */
+                }
             }
 
         .citationstyle {
@@ -134,6 +146,7 @@ body {
                 gap: 3rem;
 
                 p:first-child{
+                    line-height: var(--spacing);
                     background-color: var(--accent-color);
                     color: var(--accent-color-darker);
                     
