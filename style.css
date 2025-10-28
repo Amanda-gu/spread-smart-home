@@ -112,9 +112,9 @@ body {
                 background-color: var(--accent-color);
                 color: black;
                 font-family: var(--digital-type);
-                font-size: 2rem;
+                font-size: 1.5rem;
                 text-transform: uppercase;
-                line-height: 3rem;
+                line-height: 2.5rem;
                 align-self: start;
                 margin: var(--spacing);
                 outline: 0.05rem solid var(--accent-color);
@@ -123,14 +123,14 @@ body {
 
                 p::before{
                     content: '“';
-                    margin-inline-start: -0.9em;
+                    margin-inline-start: -1.2em;
                     /* Do we need to add '”' to the after state aswell or just before? */
                 }
 
                
             }
 
-            .intro {
+        .intro {
                 background-color: transparent;
                 outline: none;
                 font-size: var(--h2);
@@ -148,18 +148,19 @@ body {
                             }
 
         .dialogue{
-            background-color: var(--accent-color-darker);
+            /* background-color: var(--accent-color-darker); */
             color: var(--accent-color);
             padding: calc(var(--spacing)*2);
 
             p:nth-of-type(even){
                 margin-inline-start: var(--spacing);
-                margin-block-end: calc(var(--spacing)*3) ;
-                font-size: var(--h2);
+                margin-block-end: calc(var(--spacing)*2) ;
+                font-size: var(--body);
             }
 
             p:nth-of-type(odd){
-                font-size: var(--spacing);
+                font-size: 1rem;
+                text-transform: uppercase;
             }
 
             p:last-child{
@@ -183,6 +184,18 @@ body {
 
             }
 
+        .author{
+            background-color: var(--accent-color-darker);
+            padding: calc(var(--spacing)*2);
+            color: var(--accent-color);
+
+            h2{
+                text-transform: uppercase;
+                font-weight: 600;
+                margin-block-end: var(--spacing);
+            }
+
+        }
          /* grid for desktop */
         @media (width>1000px){
         /* grid-template-rows: 6rem 65vh 6rem; */
@@ -193,19 +206,22 @@ body {
         padding-block-end: calc(var(--spacing)*4);
         grid-template-areas:
 		    'emp body';
+        padding: calc(var(--spacing)*6);
+        
 
-        p, section, blockquote{
+        p, section, blockquote, a{
                grid-column: body;
             }
         
         h2 {
                 grid-column: emp;
             }
+        
 
         .citationstyle{
                 grid-column: emp;
-                font-size: 80%;
-                line-height: 130%;
+                font-size: calc(var(--body)*0.8);
+                line-height:calc(var(--body)*1.2);
                 display: block;
                 background-color: var(--accent-color-darker);
                 gap: 3rem;
@@ -242,27 +258,6 @@ body {
     
         
     }
-/*         
-        nav{
-            display: flex;
-            justify-content: center;
-            padding-block: 1rem;
-            position: sticky;
-            inset-block-start: 0;
-            background-color: black;
-            border-block-end: 0.3rem solid var(--accent-color);
-            
-            font-family: var(--digital-type);
-            font-size: 1rem;
-            line-height: 2.0rem;
-            color: var(--accent-color);
-            
-            ::after{
-                content: "↗";
-                margin-inline-start: 1rem;
-            }
-        } */
-        /* article spacing */
     
     }
 
@@ -270,21 +265,36 @@ body {
     footer{
         background-color: var(--accent-color);
         padding-inline: calc(var(--spacing)*6);
-        padding-block: calc(var(--spacing)*3);
+        padding-block: calc(var(--spacing)*2);
         display: flex;
         justify-content: space-between; 
+        text-transform: uppercase;
+        color: black;
 
         p{
-            font-size: 1rem;
-            color: black;
+            font-size: 0.8rem;
+            font-weight: 600;
+            line-height: 1.2rem;
         }
+
         a {
             color: black;
+            font-family: var(--digital-type);
+            line-height: calc(var(--body)*1.5);
         }
+
         section{
             display: flex;
             flex-direction: column;
+
+            .designers{
+                display: flex;
+                flex-direction: row;
+                gap: var(--spacing);
+
+            }
         }
+
     }
 
     .in_parentheses{
