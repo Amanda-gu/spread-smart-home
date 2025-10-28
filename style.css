@@ -46,8 +46,13 @@ body {
     
     a {
         color: var(--accent-color);
+
     }
     
+    p>a:hover, em>a:hover{
+        background-color: var(--accent-color);
+        color: var(--accent-color-darker);
+    }
 
     main{
         padding: var(--spacing); 
@@ -98,9 +103,9 @@ body {
                 text-align: center;
              }
 
+            /* to make the author and the date align side by side  */
             display: flex;
             gap: 2rem;
-            /* margin-block-end: var(--spacing); */
         }
 
         }    
