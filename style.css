@@ -140,7 +140,7 @@ body {
         blockquote {
                     padding-inline-end:2.5rem;
                     padding-inline-start:4rem;
-                    padding-block:calc(var(--spacing)/3);
+                    padding-block:3rem;
                     background-color: var(--accent-color);
                     color: black;
                     font-family: var(--digital-type);
@@ -161,18 +161,20 @@ body {
 
 
                     @media(width<600px){
-                       padding-inline-end:2rem;
-                        padding-inline-start:3rem;  
-                        font-size: 1rem;
-                        line-height: 1.5rem;
+                       padding-inline-end:1rem;
+                        padding-inline-start:2.5rem; 
+                        padding-block:2rem; 
+                        font-size: 1.2rem;
+                        line-height: 1.8rem;
                     }
 
 
-                    @media (width>1200px){
-
-                        padding-inline-end:2.5rem;
-                        padding-inline-start:4rem;  
-                        font-size: 1.5rem;
+                    @media (width>1600px){
+                        padding-inline-end:3rem;
+                        padding-inline-start:6rem;
+                        padding-block:3rem;
+                        font-size: 2rem;
+                        line-height: 2.6rem;
                     }
                 
                 }
