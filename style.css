@@ -71,11 +71,33 @@ body {
             
             
             
+            @keyframes glow{
+            from
+                {   
+                color: var(--accent-color);
+
+
+                }
+            to
+                {
+                  color:blue;
+
+                }
+            }
+
             h1{
                 font-family: var(--digital-type);
                 font-size: var(--h1);
                 line-height: calc(var(--h1)*1.2);
+                /* Glow Animation */
+                    animation-name: glow;
+                    animation-duration:10s;
+                    animation-iteration-count:infinite;
+                    animation-direction:alternate;
+                
             }
+
+            
             
             h2{
                 font-size: var(--h2);
@@ -173,7 +195,7 @@ body {
                     line-height: calc(var(--h2)*1.6);
                     padding-inline: 0;
                     padding-block-start: 0;
-                    padding-block-end: 3rem;
+                    padding-block-end: rem;
 
                     margin: 0;
                     margin-inline-end: 2rem;
@@ -317,4 +339,4 @@ body {
 }
 
 
-
+}
