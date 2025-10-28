@@ -20,7 +20,7 @@
 
 @media(width>600px){
     :root{
-        --spacing: 3rem;
+        --spacing: 4rem;
         /* font-size: 100%; */
     }
 }
@@ -107,7 +107,7 @@ body {
         .citationstyle{
                     grid-column: emp;
                     font-size: calc(var(--body)*0.8);
-                    line-height:calc(var(--body)*1.2);
+                    line-height:calc(var(--body)*1.4);
                     display: block;
                     background-color: var(--accent-color-darker);
                     gap: 3rem;
@@ -132,6 +132,19 @@ body {
                         color: var(--accent-color);
                     }
                     
+
+                    @media(width<600px){
+                        font-size: 0.9rem;
+                        line-height: 1.8rem;
+                        p:first-child{
+                            padding:0.8rem;  
+                            padding-block: 0.4rem;           
+                        }
+
+                        p:nth-child(2){
+                        padding:0.8rem;
+                        }   
+                        }
                     
 
 
@@ -364,7 +377,7 @@ body {
             }
 
 
-@media(width>600px){
+@media(width>800px){
         main{
             padding-inline: 20vw; 
         }
