@@ -17,10 +17,20 @@
 
 @media(width>600px){
     :root{
-        --spacing: 1rem;
+        --spacing: 3rem;
         font-size: 120%;
     }
 }
+
+
+@media (width>1200px){
+
+    :root{
+        --spacing: 6rem;
+        font-size: 120%;
+    }
+}
+
 
 
 body {
@@ -31,6 +41,8 @@ body {
     color: var(--text-color);
     background: var(--background-color);
     text-wrap: balance;
+
+    
     
     a {
         color: var(--accent-color);
@@ -38,25 +50,25 @@ body {
     
 
     main{
+        padding: var(--spacing); 
+       
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing);
 
-    header{
+        header{
         
-        margin-block-end: var(--spacing);
         
-        hgroup{
+            hgroup{
 
             * {
-                padding-block-end: calc(var(--spacing)*2);
+                padding-block-end: calc(var(--spacing)/4);
             }
        
             display: block;
             text-align: left;
             color: var(--accent-color);
             
-            @media (width>1000px){
-                font-size: 2rem;
-
-            }
             
             
             h1{
@@ -69,13 +81,11 @@ body {
                 font-size: var(--h2);
                 line-height: calc(var(--h2)*1.6);
             }
-            
-        }    
-        
-        .authordate{
+
+            .authordate{
 
             border-block-start: dotted 0.15rem;
-            padding-block-start: var(--spacing);
+            padding-block-start: calc(var(--spacing)/4);
             
             p {
                 font-size: 1rem;
@@ -86,186 +96,158 @@ body {
 
             display: flex;
             gap: 2rem;
-            margin-block-end: var(--spacing);
+            /* margin-block-end: var(--spacing); */
         }
 
+        }    
         
+         
+        } 
+
+    
+
+        .citationstyle{
+                    grid-column: emp;
+                    font-size: calc(var(--body)*0.8);
+                    line-height:calc(var(--body)*1.2);
+                    display: block;
+                    background-color: var(--accent-color-darker);
+                    gap: 3rem;
+                    align-self: start;
         
-    } 
+
+                    *{
+                        padding-inline: calc(var(--spacing)/4);
+                        
+                    }
+
+                    p:first-child{
+                        padding-block: calc(var(--spacing)/12);
+                     
+                        background-color: var(--accent-color);
+                        color: var(--accent-color-darker);
+                                            
+                    }
+
+                    p:nth-child(2){
+                        padding-block: calc(var(--spacing)/8);
+                        color: var(--accent-color);
+                    }
+                    
+                    
 
 
-        /* background-color: blue; */
-        position: relative;
-        padding: calc(var(--spacing)*6);
-
-        /* *{
-            padding-block-end: var(--spacing);
-        } */
-        
-       
+            }
 
 
 
         blockquote {
-                padding-inline:calc(var(--spacing)*4);
-                padding-block: calc(var(--spacing)*2);
-                background-color: var(--accent-color);
-                color: black;
-                font-family: var(--digital-type);
-                font-size: 1.5rem;
-                text-transform: uppercase;
-                line-height: 2.5rem;
-                align-self: start;
-                margin: var(--spacing);
-                outline: 0.05rem solid var(--accent-color);
-                outline-offset: var(--spacing);
-                /* We used code pen for the outline border | link: https://codepen.io/yochans/pen/XWNjzop */
+                    padding-inline:calc(var(--spacing)/1.6);
+                    padding-block:calc(var(--spacing)/3);
+                    background-color: var(--accent-color);
+                    color: black;
+                    font-family: var(--digital-type);
+                    font-size: 1.5rem;
+                    text-transform: uppercase;
+                    line-height: 2.5rem;
+                    align-self: start;
+                    margin: calc(var(--spacing)/4);
+                    outline: 0.05rem solid var(--accent-color);
+                    outline-offset: calc(var(--spacing)/4);
+                    /* We used code pen for the outline border | link: https://codepen.io/yochans/pen/XWNjzop */
 
-                p::before{
-                    content: '“';
-                    margin-inline-start: -1.2em;
-                    /* Do we need to add '”' to the after state aswell or just before? */
+                    p::before{
+                        content: '“';
+                        margin-inline-start: -1.2em;
+                        /* Do we need to add '”' to the after state aswell or just before? */
+                    }
+
+                
                 }
-
-               
-            }
 
         .intro {
-                background-color: transparent;
-                outline: none;
-                font-size: var(--h2);
-                color: var(--accent-color);
-                line-height: calc(var(--h2)*1.6);
-                padding-inline: 0;
-                padding-block-start: 0;
+                    background-color: transparent;
+                    outline: none;
+                    font-size: var(--h2);
+                    color: var(--accent-color);
+                    line-height: calc(var(--h2)*1.6);
+                    padding-inline: 0;
+                    padding-block-start: 0;
 
-                margin: 0;
-                margin-inline-end: 2rem;
-                p::before{
-                    content: none;
-                    margin-inline-start: 0;
-                } 
-                            }
+                    margin: 0;
+                    margin-inline-end: 2rem;
+                    p::before{
+                        content: none;
+                        margin-inline-start: 0;
+                    } 
+                                }
 
         .dialogue{
-            /* background-color: var(--accent-color-darker); */
-            color: var(--accent-color);
-            padding: calc(var(--spacing)*2);
+                /* background-color: var(--accent-color-darker); */
+                color: var(--accent-color);
+                padding: calc(var(--spacing)/4);
 
-            p:nth-of-type(even){
-                margin-inline-start: var(--spacing);
-                margin-block-end: calc(var(--spacing)*2) ;
-                font-size: var(--body);
-            }
-
-            p:nth-of-type(odd){
-                font-size: 1rem;
-                text-transform: uppercase;
-            }
-
-            p:last-child{
-                margin-block-end: 0;
-            }
-            
-        }
-
-        .citationstyle {
-                
-                display: block;
-                background-color: var(--accent-color-darker);
-                gap: 3rem;
-
-                p:first-child{
-                    line-height: var(--spacing);
-                    background-color: var(--accent-color);
-                    color: var(--accent-color-darker);
-                    
+                p:nth-of-type(even){
+                    margin-inline-start: calc(var(--spacing)/4);
+                    margin-block-end: calc(var(--spacing)/4);
+                    font-size: var(--body);
                 }
 
+                p:nth-of-type(odd){
+                    font-size: 1rem;
+                    text-transform: uppercase;
+                }
+
+                p:last-child{
+                    margin-block-end: 0;
+                }
+                
             }
 
         .author{
             background-color: var(--accent-color-darker);
-            padding: calc(var(--spacing)*2);
+            padding: calc(var(--spacing)/4);
             color: var(--accent-color);
 
             h2{
                 text-transform: uppercase;
                 font-weight: 600;
-                margin-block-end: var(--spacing);
+                margin-block-end: calc(var(--spacing)/4);
             }
 
         }
-         /* grid for desktop */
-        @media (width>1000px){
-        /* grid-template-rows: 6rem 65vh 6rem; */
-
-        display: grid;
-        gap: calc(var(--spacing)*3);
-        grid-template-columns: 1fr 2fr;
-        padding-block-end: calc(var(--spacing)*4);
-        grid-template-areas:
-		    'emp body';
-        padding: calc(var(--spacing)*6);
+        
+        
+/* 2 column grid for desktop */
+    
+        @media (width>1200px){
+            display: grid; 
+            gap: calc(var(--spacing)/2);
+            grid-template-columns: 1fr 2fr;
+            padding-block-end: var(--spacing);
+            grid-template-areas:
+                'emp body';
+            padding: var(--spacing);
         
 
-        p, section, blockquote, a{
+            p, section, blockquote, a{
                grid-column: body;
             }
         
-        h2 {
+            h2 {
                 grid-column: emp;
             }
-        
-
-        .citationstyle{
-                grid-column: emp;
-                font-size: calc(var(--body)*0.8);
-                line-height:calc(var(--body)*1.2);
-                display: block;
-                background-color: var(--accent-color-darker);
-                gap: 3rem;
-                align-self: start;
-
-                *{
-                    padding-inline: var(--spacing);
-                    padding-block: calc(var(--spacing)/2);
-                }
-
-                p:nth-child(2){
-                     padding-block: var(--spacing);
-                     color: var(--accent-color);
-                }
-
-        
-              
-        
-
-
-
-
-        }
-/* 
-        .paragraphsonly{
-            grid-template-areas:
-		    'emp body';
-
-            p, blockquote{
-                grid-area: body;
-            }
-        } */
-
     
-        
-    }
+      
+        }
     
     }
 
 
     footer{
         background-color: var(--accent-color);
-        padding-inline: calc(var(--spacing)*6);
-        padding-block: calc(var(--spacing)*2);
+        padding-inline: var(--spacing);
+        padding-block: var(--spacing);
         display: flex;
         justify-content: space-between; 
         text-transform: uppercase;
