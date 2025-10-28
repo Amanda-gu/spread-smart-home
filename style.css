@@ -191,7 +191,7 @@ body {
                     } 
 
                     /* Glow Animation */
-                    animation-name: glow;
+                    animation-name: test;
                     animation-duration:10s;
                     animation-iteration-count:infinite;
                     animation-direction:alternate;
@@ -199,7 +199,7 @@ body {
                      }
 
              
-            @keyframes glow {
+            @keyframes test {
             from
                 {   
                 color: var(--accent-color);
