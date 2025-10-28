@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
 
 
@@ -24,12 +24,13 @@
 
 
 body {
-    font-size: 110%;
-    line-height: 1.8rem;
-    font-family: "Inconsolata", monospace;
+    font-size: 100%;
+    line-height: 2rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 300;
     color: var(--text-color);
     background: var(--background-color);
-    
+    text-wrap: balance;
     
     a {
         color: var(--accent-color);
@@ -43,20 +44,17 @@ body {
         margin-block-end: var(--spacing);
         
         hgroup{
-            display: flex;
-            flex-direction: column;
-        }
-        
-        
-        /* everything in the green box */
-        section{
+
+            * {
+                padding-block-end: calc(var(--spacing)*2);
+            }
+       
             display: block;
             text-align: left;
             color: var(--accent-color);
             
             @media (width>1000px){
                 font-size: 2rem;
-                grid-area: header;
 
             }
             
@@ -65,7 +63,6 @@ body {
                 font-family: var(--digital-type);
                 font-size: var(--h1);
                 line-height: calc(var(--h1)*1.2);
-                padding-block-end: 1rem;
             }
             
             h2{
@@ -73,18 +70,26 @@ body {
                 line-height: calc(var(--h2)*1.6);
             }
             
-            
-        }
+        }    
         
-        p {
-            font-size: 1rem;
-            line-height: 1.8rem;
-            text-align: center;
+        .authordate{
+
+            border-block-start: dotted 0.15rem;
+            padding-block-start: var(--spacing);
+            
+            p {
+                font-size: 1rem;
+                line-height: 1.8rem;
+                text-transform: uppercase;
+                text-align: center;
+             }
+
+            display: flex;
+            gap: 2rem;
+            margin-block-end: var(--spacing);
         }
 
         
-        
-        /* spacing for mobile */
         
     } 
 
@@ -97,13 +102,7 @@ body {
             padding-block-end: var(--spacing);
         } */
         
-        .authordate{
-            display: flex;
-    
-            justify-content: space-between;
-            margin-block-end: var(--spacing);
-        }
-
+       
 
 
 
@@ -112,8 +111,10 @@ body {
                 padding-block: calc(var(--spacing)*2);
                 background-color: var(--accent-color);
                 color: black;
-                font-size: var(--h2);
-                line-height: calc(var(--h2)*1.6);
+                font-family: var(--digital-type);
+                font-size: 2rem;
+                text-transform: uppercase;
+                line-height: 3rem;
                 align-self: start;
                 margin: var(--spacing);
                 outline: 0.05rem solid var(--accent-color);
@@ -125,8 +126,26 @@ body {
                     margin-inline-start: -0.9em;
                     /* Do we need to add '”' to the after state aswell or just before? */
                 }
+
+               
             }
 
+            .intro {
+                background-color: transparent;
+                outline: none;
+                font-size: var(--h2);
+                color: var(--accent-color);
+                line-height: calc(var(--h2)*1.6);
+                padding-inline: 0;
+                padding-block-start: 0;
+
+                margin: 0;
+                margin-inline-end: 2rem;
+                p::before{
+                    content: none;
+                    margin-inline-start: 0;
+                } 
+                            }
 
         .dialogue{
             background-color: var(--accent-color-darker);
