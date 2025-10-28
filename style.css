@@ -166,6 +166,10 @@ body {
                         /* Do we need to add '”' to the after state aswell or just before? */
                     }
 
+                    .superscript{
+                        color: var(--accent-color-darker);
+                    }
+
                 
                 }
 
@@ -318,25 +322,25 @@ body {
             flex-direction: row;
         }
 
-
-
-
-    .in_parentheses{
-       font-style: bold;
     }
-
-    .superscript{
-        vertical-align: super;
-        font-size: 0.8em;
-        line-height: 0;
-        color: var(--accent-color-darker);
-    }
-
-
-    em {
-        font-style: italic;
-    }              
-}
+    
+    
+    
+        .in_parentheses{
+           font-style: bold;
+        }
+    
+        .superscript{
+            vertical-align: super;
+            font-size: 0.8em;
+            line-height: 0;
+            color: var(--text-color);
+        }
+    
+    
+        em {
+            font-style: italic;
+        }              
 
 
 
