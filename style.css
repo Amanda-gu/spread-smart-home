@@ -70,30 +70,12 @@ body {
             color: var(--accent-color);
             
             
-            
-            @keyframes glow{
-            from
-                {   
-                color: var(--accent-color);
-
-
-                }
-            to
-                {
-                  color:blue;
-
-                }
-            }
+           
 
             h1{
                 font-family: var(--digital-type);
                 font-size: var(--h1);
                 line-height: calc(var(--h1)*1.2);
-                /* Glow Animation */
-                    animation-name: glow;
-                    animation-duration:10s;
-                    animation-iteration-count:infinite;
-                    animation-direction:alternate;
                 
             }
 
@@ -203,7 +185,27 @@ body {
                         content: none;
                         margin-inline-start: 0;
                     } 
-                                }
+
+                    /* Glow Animation */
+                    animation-name: glow;
+                    animation-duration:10s;
+                    animation-iteration-count:infinite;
+                    animation-direction:alternate;
+
+                     }
+
+             
+            @keyframes glow {
+            from
+                {   
+                color: var(--accent-color);
+                }
+            to
+                {
+                  color:blue;
+
+                }
+            }
 
         .dialogue{
                 /* background-color: var(--accent-color-darker); */
@@ -255,6 +257,9 @@ body {
             > header, .citationstyle { grid-column: 2; } /* 1st, from right. */
             > p, section, blockquote, a{ grid-column: 1; } /* 2nd, from right. */
               
+            >header{
+                grid-row: 1;
+            }
             gap: calc(var(--spacing)/2);
             
             padding-block-end: var(--spacing);
