@@ -160,12 +160,11 @@ body {
                     }
 
 
-                    @media(width>600px){
-                        main{
-                            padding-inline: 20vw; 
-                        }
-
-                        footer{padding-inline: 20vw;}
+                    @media(width<600px){
+                       padding-inline-end:2rem;
+                        padding-inline-start:3rem;  
+                        font-size: 1rem;
+                        line-height: 1.5rem;
                     }
 
 
@@ -375,9 +374,9 @@ body {
 @media (width>1200px){
 
         main{
-            padding-inline: 15vw; 
+            padding-inline: 10vw; 
         }
-        footer{padding-inline: 15vw;}
+        footer{padding-inline: 10vw;}
     }
 
 @media print {
