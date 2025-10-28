@@ -13,7 +13,6 @@
     --h2: 1.2rem;
     --body: 1rem;
     font-size: 110%;
-    padding: 5vw; 
 }
 
 
@@ -21,7 +20,6 @@
 
 @media(width>600px){
     :root{
-         padding: 12vw; 
         --spacing: 3rem;
         font-size: 110%;
     }
@@ -31,7 +29,6 @@
 @media (width>1200px){
 
     :root{
-        padding: 10vw;
         --spacing: 6rem;
         font-size: 105%;
     }
@@ -46,18 +43,15 @@ body {
     font-weight: 300;
     color: var(--text-color);
     background: var(--background-color);
-    text-wrap: balance;
+    /* text-wrap: balance; */
 
-    
-    
    
     main{
-       
+        padding: 8vw;
         direction: ltr;
         display: flex;
         flex-direction: column;
         gap: var(--spacing);
-
         header{
             
         
@@ -110,8 +104,6 @@ body {
          
         } 
 
-    
-
         .citationstyle{
                     grid-column: emp;
                     font-size: calc(var(--body)*0.8);
@@ -129,9 +121,9 @@ body {
 
                     p:first-child{
                         padding-block: calc(var(--spacing)/12);
-                     
-                        background-color: var(--accent-color);
-                        color: var(--accent-color-darker);
+                        border-block-end: var(--accent-color) dotted;
+                        /* background-color: var(--accent-color); */
+                        color: var(--accent-color);
                                             
                     }
 
@@ -145,10 +137,9 @@ body {
 
             }
 
-
-
         blockquote {
-                    padding-inline:3rem;
+                    padding-inline-end:2.5rem;
+                    padding-inline-start:4rem;
                     padding-block:calc(var(--spacing)/3);
                     background-color: var(--accent-color);
                     color: black;
@@ -157,11 +148,7 @@ body {
                     text-transform: uppercase;
                     line-height: 2.5rem;
                     align-self: start;
-                    margin: calc(var(--spacing)/4);
-                    outline: 0.05rem solid var(--accent-color);
-                    outline-offset: calc(var(--spacing)/4);
-                    /* We used code pen for the outline border | link: https://codepen.io/yochans/pen/XWNjzop */
-
+                
                     p::before{
                         content: '“';
                         margin-inline-start: -1.2em;
@@ -172,10 +159,27 @@ body {
                         color: var(--accent-color-darker);
                     }
 
+
+                    @media(width>600px){
+                        main{
+                            padding-inline: 20vw; 
+                        }
+
+                        footer{padding-inline: 20vw;}
+                    }
+
+
+                    @media (width>1200px){
+
+                        padding-inline-end:2.5rem;
+                        padding-inline-start:4rem;  
+                        font-size: 1.5rem;
+                    }
                 
                 }
 
         .intro {
+                    max-inline-size: 32ch;
                     background-color: transparent;
                     outline: none;
                     font-size: var(--h2);
@@ -183,7 +187,7 @@ body {
                     line-height: calc(var(--h2)*1.6);
                     padding-inline: 0;
                     padding-block-start: 0;
-                    padding-block-end: rem;
+                    padding-block-end: 3rem;
 
                     margin: 0;
                     margin-inline-end: 2rem;
@@ -250,6 +254,8 @@ body {
         
         
 /* 2 column grid for desktop */
+
+
     
         @media (width>1200px){ 
             grid-template-columns: 2fr 1fr;
@@ -285,7 +291,7 @@ body {
 
     footer{
         background-color: var(--accent-color);
-        padding-inline: var(--spacing);
+        padding-inline: 8vw;
         padding-block: calc(var(--spacing)/4);
         display: flex;
         flex-direction: column;
@@ -357,7 +363,22 @@ body {
             }
 
 
+@media(width>600px){
+        main{
+            padding-inline: 20vw; 
+        }
 
+        footer{padding-inline: 20vw;}
+    }
+
+
+@media (width>1200px){
+
+        main{
+            padding-inline: 15vw; 
+        }
+        footer{padding-inline: 15vw;}
+    }
 
 @media print {
     :root{
