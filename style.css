@@ -289,7 +289,7 @@ body {
         padding-block: calc(var(--spacing)/4);
         display: flex;
         flex-direction: column;
-        gap: rem;
+        gap: 1rem;
         justify-content: space-between; 
         text-transform: uppercase;
         color: black;
