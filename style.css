@@ -51,13 +51,13 @@ body {
 
     main{
         padding: var(--spacing); 
-       
+       direction: ltr;
         display: flex;
         flex-direction: column;
         gap: var(--spacing);
 
         header{
-        
+            
         
             hgroup{
 
@@ -244,21 +244,30 @@ body {
 /* 2 column grid for desktop */
     
         @media (width>1200px){
-            display: grid; 
+            
+            grid-template-columns: 2fr 1fr;
+            direction: rtl;
+            display: grid;
+            *:not(header) { direction: ltr; } 
+            /* flip this back. */
+            /* grid-template-areas:
+                        'emp body'; */
+            > header, .citationstyle { grid-column: 2; } /* 1st, from right. */
+            > p, section, blockquote, a{ grid-column: 1; } /* 2nd, from right. */
+              
             gap: calc(var(--spacing)/2);
-            grid-template-columns: 1fr 2fr;
+            
             padding-block-end: var(--spacing);
-            grid-template-areas:
-                'emp body';
+            
             padding: var(--spacing);
-        
 
-            p, section, blockquote, a{
+
+            /* p, section, blockquote, a{
                grid-column: body;
-            }
+            } */
         
             h2 {
-                grid-column: emp;
+                grid-column: 1;
             }
     
       
@@ -310,7 +319,7 @@ body {
 
 
     .in_parentheses{
-       font-style: light;
+       font-style: bold;
     }
 
     .superscript{
