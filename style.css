@@ -12,7 +12,7 @@
     --h1: 3rem;
     --h2: 1.2rem;
     --body: 1rem;
-    font-size: 110%;
+    /* font-size: 100%; */
 }
 
 
@@ -21,7 +21,7 @@
 @media(width>600px){
     :root{
         --spacing: 3rem;
-        font-size: 110%;
+        /* font-size: 100%; */
     }
 }
 
@@ -30,7 +30,7 @@
 
     :root{
         --spacing: 6rem;
-        font-size: 105%;
+        /* font-size: 110%; */
     }
 }
 
@@ -43,7 +43,7 @@ body {
     font-weight: 300;
     color: var(--text-color);
     background: var(--background-color);
-    /* text-wrap: balance; */
+    text-wrap: balance;
 
    
     main{
