@@ -256,10 +256,8 @@ body {
                         'emp body'; */
             > header, .citationstyle { grid-column: 2; } /* 1st, from right. */
             > p, section, blockquote, a{ grid-column: 1; } /* 2nd, from right. */
-              
-            >header{
-                grid-row: 1;
-            }
+            > header:first-child + * { grid-row: 1; }
+
             gap: calc(var(--spacing)/2);
             
             padding-block-end: var(--spacing);
