@@ -14,7 +14,7 @@
     --body: 1rem;
 }
 
-/* breakpoint for reducing inline padding*/
+/* breakpoint for reducing page padding*/
 
 /* one stack */
 @media(width>600px){
@@ -57,6 +57,7 @@
 }
 
 
+
 body {
     /* Font stuffs */
     font-family: "IBM Plex Sans", monospace;
@@ -69,7 +70,9 @@ body {
     background: var(--background-color);
     text-wrap: pretty;
 
-   main, footer{
+
+    /* page padding */
+    main, footer{
             padding: 5vw; 
         }
     main{
@@ -102,13 +105,16 @@ body {
                 text-align: left;
                 color: var(--accent-color);
             
-
+                
                 h1{
                     font-family: var(--digital-type);
                     font-size: var(--h1);
                     line-height: calc(var(--h1)*1.2);
                     max-inline-size: 10ch;
+            
                 }
+
+                
 
                 h2{
                     font-size: var(--h2);
@@ -230,23 +236,7 @@ body {
                     margin: 0;
                     margin-inline-end: 2rem;
                     
-                    /* Glow Animation */
-                    p{
-                        animation-name: test;
-                        animation-duration:10s;
-                        animation-iteration-count:infinite;
-                    }
-
-                    @keyframes test{
-                            from
-                                {   
-                                border: 1rem solid red;
-                                }
-                            to
-                                {
-                                border: 1rem solid blue;
-                                }
-                    }
+                    
 
                     /* to remove the '“' at the beginning of the quote */
                     p::before{
@@ -445,3 +435,29 @@ body {
             margin: 2cm;
         }
 }
+
+
+/* Glow Animation */ 
+
+h1, .intro{
+    animation-name: glow;
+    animation-duration:3s;
+    animation-timing-function: ease-in-out;
+    /* animation-iteration-count:infinite;          */
+        }
+
+@keyframes glow{
+    0%s
+        {   
+            font-weight: 100;
+                }
+    50%
+            {
+             font-weight: 400;
+            }
+
+    100%
+            {
+             font-weight: 300;
+            }
+        }
