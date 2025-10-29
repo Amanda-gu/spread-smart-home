@@ -463,19 +463,24 @@ body {
 
 h1, .intro{
     animation-name: glow;
-    animation-duration:3s;
+    animation-duration:10s;
     animation-timing-function: ease-in-out;
-    /* animation-iteration-count:infinite;          */
+    animation-iteration-count:infinite;
         }
 
 @keyframes glow{
-    0%s
+    0%
         {   
-            font-weight: 100;
+            font-weight: 300;
                 }
-    50%
+    25%
             {
-             font-weight: 400;
+             font-weight: 200;
+            }
+
+    75%
+            {
+             font-weight: 350;
             }
 
     100%
