@@ -43,16 +43,15 @@
     }
 }
 
-@media (width>1800px){
+@media (width>1600px){
 
     :root{
         --spacing: 6rem;
         font-size: 120%;
-        --h1: 5rem;
+        --h1: 4rem;
     }
 
     main, footer{
-            
             padding-inline: 10vw; 
         }
 }
@@ -68,7 +67,7 @@ body {
 
     
     background: var(--background-color);
-    /* text-wrap: balance; to fix rag in body text and blockquote */
+    text-wrap: pretty;
 
    main, footer{
             padding: 5vw; 
@@ -91,6 +90,7 @@ body {
 
         header{
             /* why do we have hgroup and header? like why are they separate? is it for the media query at the bottom with grid column? */
+
         hgroup{ 
 
                 * {
@@ -319,7 +319,7 @@ body {
       
         }
 
-        @media (width>1800px){
+        @media (width>1600px){
             max-inline-size: 90vw;
             margin: auto;
         }
@@ -402,45 +402,46 @@ body {
         background-color: var(--accent-color-darker);
     }              
 
+}
 
 
-/* breakpoint for reducing inline padding
-
-
-/* tablet */
-/* @media(width>800px){
-
-        main, footer{
-            padding-inline: 15vw; 
-        }
-    }
-
-/* desktop */
-/* @media (width>1200px){
-
-        main, footer{
-            padding-inline: 10vw; 
-        }
-    }
-
-@media (width>1800px){
-
-    :root{
-        --h1: 5rem;
-        font-size: 120%;
-    }
-
-    main, footer{
-            
-            padding-inline: 10vw; 
-        }
-
-    }  */
-
+/* PRINT */
 @media print {
     :root{
+        --spacing:1.8rem;
         --text-color: black;
         --background-color: white;
+        --accent-color: #008425;
     }
-}
+    body{
+        main{
+            text-wrap: pretty;
+
+            a{
+                pointer-events: none;
+                text-decoration: none;
+            }
+
+            em {
+                font-style: italic;
+                font-weight: 600;
+            } 
+            
+            .view-original{
+                display: none;
+            }
+
+            .author{
+                page-break-before: always;
+            }
+
+            .citationstyle{
+                max-inline-size: 45ch;
+            }
+        }
+    }
+
+     @page{
+            margin: 2cm;
+        }
 }
