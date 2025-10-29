@@ -233,8 +233,15 @@ body {
                 
                 }
 
-        .intro {
-                    max-inline-size: 32ch; /* To break the intro quote into two lines or more*/
+        .intro {    
+
+                    font-family: var(--digital-type);
+                    font-size: 1.5rem;
+                    line-height: 2.5rem;
+                    max-inline-size: 35ch; 
+                    text-transform: uppercase;
+                    align-self: start;
+        
 
                     /* This is part of blockquote so we have to overwrite it*/
                     background-color: transparent; 
@@ -244,11 +251,10 @@ body {
                     line-height: 2rem; 
                     padding-inline: 0;
                     padding-block-start: 0;
-                    padding-block-end: 3rem;
+                    /* padding-block-end: 3rem; */
                     margin: 0;
-                    margin-inline-end: 2rem;
-                    
-                    
+                    /* margin-inline-end: 2rem; */
+         
 
                     /* to remove the '“' at the beginning of the quote */
                     p::before{
@@ -272,6 +278,7 @@ body {
                 p:nth-of-type(odd){
                     font-size: 1rem;
                     text-transform: uppercase;
+                    opacity: 60%;
                 }
 
                 p:last-child{
@@ -290,7 +297,7 @@ body {
 
             h2{
                 text-transform: uppercase;
-                font-weight: 600;
+                font-weight: 500;
                 margin-block-end: calc(var(--spacing)/4);
             }
 
