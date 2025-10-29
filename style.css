@@ -16,6 +16,12 @@
 
 /* breakpoint for reducing page padding*/
 
+/* everything between 800-1200 */
+main, footer{
+            padding: 5vw; 
+        }
+
+
 /* one stack */
 @media(width>600px){
     :root{
@@ -26,7 +32,7 @@
 
 @media(width>800px){
 
-        main, footer{
+    main, footer{
             padding-inline: 15vw; 
         }
     }
@@ -46,9 +52,9 @@
 @media (width>1600px){
 
     :root{
-        --spacing: 6rem;
-        font-size: 120%;
-        --h1: 4rem;
+        --spacing: 8rem;
+        font-size: 110%;
+        --h1: 3.6rem;
     }
 
     main, footer{
@@ -72,9 +78,7 @@ body {
 
 
     /* page padding */
-    main, footer{
-            padding: 5vw; 
-        }
+    
     main{
 
         direction: ltr;
@@ -99,7 +103,12 @@ body {
                 * {
                     padding-block-end: calc(var(--spacing)/4);
                     /* shouldnt we not apply this to thelast child? */
+                
+                    @media (width<600px) {
+                        padding-block-end: calc(var(--spacing)/2);
+                    }
                 }
+                
        
                 display: block;
                 text-align: left;
@@ -114,7 +123,6 @@ body {
             
                 }
 
-                
 
                 h2{
                     font-size: var(--h2);
@@ -124,6 +132,10 @@ body {
                 .authordate{
                     border-block-start: dotted 0.15rem;
                     padding-block-start: calc(var(--spacing)/4);
+
+                    @media (width<600px) {
+                        padding-block-start: calc(var(--spacing)/2);
+                    }
             
                     p {
                         font-size: 1rem;
@@ -272,6 +284,9 @@ body {
             background-color: var(--accent-color-darker);
             padding: calc(var(--spacing)/4);
             color: var(--accent-color);
+            a:hover{
+                color: var(--text-color);
+            }
 
             h2{
                 text-transform: uppercase;
@@ -365,7 +380,7 @@ body {
       
         }
 
-        @media (width>1800px){
+        @media (width>1600px){
             max-inline-size: 90vw;
             margin: auto;
         }
