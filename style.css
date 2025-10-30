@@ -121,6 +121,7 @@ body {
                     font-size: var(--h1);
                     line-height: calc(var(--h1)*1.2);
                     max-inline-size: 10ch;
+                    text-transform: uppercase;
             
                 }
 
