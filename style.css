@@ -50,7 +50,7 @@ main, footer{
     }
 }
 
-@media (width>1600px){
+@media (width>1700px){
 
     :root{
         --spacing: 8rem;
@@ -227,7 +227,7 @@ body {
                     }
 
                     /* For larger screens */
-                    @media (width>1600px){
+                    @media (width>1700px){
                         padding-inline-end:3rem;
                         padding-inline-start:6rem;
                         font-size: 2rem;
@@ -334,7 +334,7 @@ body {
       
         }
 
-        @media (width>1600px){
+        @media (width>1700px){
             max-inline-size: 90vw;
             margin: auto;
         }
@@ -391,7 +391,7 @@ body {
       
         }
 
-        @media (width>1600px){
+        @media (width>1700px){
             max-inline-size: 90vw;
             margin: auto;
         }
