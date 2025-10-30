@@ -19,6 +19,7 @@
 /* everything between 800-1200 */
 main, footer{
             padding: 5vw; 
+            padding-block-end: 10vw; 
         }
 
 
@@ -33,7 +34,7 @@ main, footer{
 @media(width>800px){
 
     main, footer{
-            padding-inline: 15vw; 
+            padding-inline: 15vw;
         }
     }
 
