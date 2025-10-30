@@ -436,10 +436,6 @@ body {
         main{
             text-wrap: pretty;
 
-            h1, .intro{
-                font-weight: 450;
-            }
-
             .intro{
             
                 color: var(--text-color);
@@ -508,8 +504,9 @@ body {
 /* Glow Animation */ 
 
 h1, .intro{
+     
     animation-name: glow;
-    animation-duration:10s;
+    animation-duration:12s;
     animation-timing-function: ease-in-out;
     animation-iteration-count:infinite;
         }
@@ -517,7 +514,7 @@ h1, .intro{
 @keyframes glow{
     0%
         {   
-            font-weight: 300;
+            font-weight: 350;
                 }
     25%
             {
@@ -531,6 +528,6 @@ h1, .intro{
 
     100%
             {
-             font-weight: 300;
+             font-weight: 350;
             }
         }
